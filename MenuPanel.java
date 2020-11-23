@@ -1,8 +1,8 @@
-import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class MenuPanel extends JFrame{
+public class MenuPanel extends JPanel {
 		
 	private JLabel lblred, lblgreen, lblblue, lblhex;
 	private JTextField txthex, txtrgb;
@@ -26,10 +26,6 @@ public class MenuPanel extends JFrame{
 		
 		lblhex = new JLabel("Enter hex value");
 		
-		
 	}
-
-	public static void main(String[] args) {
-		new MenuPanel();
-	}
+	
 }

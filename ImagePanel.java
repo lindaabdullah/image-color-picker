@@ -13,8 +13,6 @@ public class ImagePanel extends JPanel {
 	private BufferedImage image;
 	private static File imagefile;
 	public ImagePanel(File imagefile) {
-		// TODO Auto-generated constructor stub
-		
 		try {
 			
 			image = ImageIO.read(imagefile);
@@ -22,17 +20,13 @@ public class ImagePanel extends JPanel {
 			add(picLabel);
 			
 		} catch (IOException e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 	}
 	@Override
 	public void paintComponents(Graphics g) {
-		// TODO Auto-generated method stub
 		super.paintComponents(g);
 		g.drawImage(image, 0, 0, this);
 	}
-	public static void main(String[] args) {
-		new ImagePanel();
-	}
-
+	
 }
