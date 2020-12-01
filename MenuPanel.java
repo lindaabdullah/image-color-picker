@@ -44,5 +44,18 @@ public class MenuPanel extends JPanel {
 		add(textHex);
 
 	}
+
+	public void setRed(int val) {
+		textRed.setText(Integer.toString(val));
+	}
+	public void setGreen(int val) {
+		textGreen.setText(Integer.toString(val));
+	}
+	public void setBlue(int val) {
+		textBlue.setText(Integer.toString(val));
+	}
+	public void setHex(String val) {
+		textHex.setText(val);
+	}
 	
 }

@@ -14,7 +14,7 @@ public class FileChooserListener implements ActionListener {
 		fileChooser = new JFileChooser();
 		FileNameExtensionFilter filter = new FileNameExtensionFilter("Images", "jpg", "jpeg", "png", "bmp", "tif", "tiff");
 		fileChooser.setFileFilter(filter);
-		fileChooser.setCurrentDirectory(new File(System.getProperty("user.home") + System.getProperty("file.separator") + "Desktop"));
+		fileChooser.setCurrentDirectory(new File("."));
 	}
 
 	@Override

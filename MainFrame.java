@@ -5,7 +5,7 @@ import javax.swing.BoxLayout;
 public class MainFrame extends JFrame {
 	
 	private static ImagePanel imagePanel;
-	private MenuPanel menuPanel;
+	private static MenuPanel menuPanel;
 
 	public MainFrame() {
 		imagePanel = new ImagePanel(this);
@@ -24,6 +24,9 @@ public class MainFrame extends JFrame {
 
 	public static ImagePanel getImagePanel() {
 		return imagePanel;
+	}
+	public static MenuPanel getMenuPanel() {
+		return menuPanel;
 	}
 
 }
