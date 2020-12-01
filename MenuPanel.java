@@ -1,31 +1,48 @@
 import javax.swing.JPanel;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class MenuPanel extends JPanel {
 		
-	private JLabel lblred, lblgreen, lblblue, lblhex;
-	private JTextField txthex, txtrgb;
-	private ImagePanel imgpanel;
+	private JLabel labelRed, labelGreen, labelBlue, labelHex;
+	private JTextField textRed, textGreen, textBlue, textHex;
+	private JButton openFileChooser;
 		
 	public MenuPanel() {
 		
-		setLayout(null);
+		labelRed = new JLabel("Red: ");
+		labelGreen = new JLabel("Green: ");
+		labelBlue = new JLabel("Blue: ");
+		labelHex = new JLabel("Hex: ");
+
+		textRed = new JTextField();
+		textGreen = new JTextField();
+		textBlue = new JTextField();
+		textHex = new JTextField();
+
+		textRed.setColumns(3);
+		textGreen.setColumns(3);
+		textBlue.setColumns(3);
+		textHex.setColumns(6);
+
+		openFileChooser = new JButton("Open Image");
+		openFileChooser.addActionListener(new FileChooserListener());
+
+		add(openFileChooser);
+
+		add(labelRed);
+		add(textRed);
+
+		add(labelGreen);
+		add(textGreen);
 		
-		lblred = new JLabel("Red: ");
-		lblgreen = new JLabel("Green: ");
-		lblblue = new JLabel("Blue: ");
-		
-		lblred.setBounds(10, 100, 100, 50);
-		lblgreen.setBounds(20, 100, 100, 50);
-		lblblue.setBounds(20, 200, 100, 50);
-		
-		add(lblblue);
-		add(lblred);
-		add(lblgreen);
-		
-		lblhex = new JLabel("Enter hex value");
-		
+		add(labelBlue);
+		add(textBlue);
+
+		add(labelHex);
+		add(textHex);
+
 	}
 	
 }
