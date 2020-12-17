@@ -16,6 +16,7 @@ public class MainFrame extends JFrame {
 
 		setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 		pack();
+		setTitle("Image Color Picker");
 		setVisible(true);
 		setResizable(false);
 		setLocationRelativeTo(null);
